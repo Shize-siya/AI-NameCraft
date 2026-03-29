@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>org.example.testplugin1</id>
+    <name>Deepseek Class Name Generator</name>
+    <version>1.0.0</version>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description> <![CDATA[
+        Generate class names automatically using DeepSeek AI based on text descriptions.
+        ]]></description>
+    <change-notes>
+        <![CDATA[
+        Initial version with DeepSeek integration.
+        ]]>
+    </change-notes>
+
+    <idea-version since-build="201.6668"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="DeepSeek.GenerateClassName"
+                class="com.deepseek.ClassNameGeneratorAction"
+                text="Generate Class Name with DeepSeek"
+                description="Generate class name from selected text using DeepSeek">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+        </action>
+    </actions>
+</idea-plugin>
